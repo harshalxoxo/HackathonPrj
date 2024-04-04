@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite"  >
+	<listeners>
+		<listener class-name="Utils.ExtentReportManager"></listener>
+	</listeners>
+	<test thread-count="5" name="ChromeTest">
+		<parameter name="os" value="Windows" />
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="TestCase.TC_001_UpcomingBikeDetails" />
+			<class name="TestCase.TC_002_UsedCarsDetails" />
+			<class name="TestCase.TC_003_GoogleLogin" />
+			<class name="TestCase.TC_004_GoogleSignup" />
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="EdgeTest">
+		<parameter name="os" value="Edge" />
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="TestCase.TC_001_UpcomingBikeDetails" />
+			<class name="TestCase.TC_002_UsedCarsDetails" />
+			<class name="TestCase.TC_003_GoogleLogin" />
+			<class name="TestCase.TC_004_GoogleSignup" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
